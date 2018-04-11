@@ -1,0 +1,310 @@
+{
+  "basic": {
+    "context": "1",
+    "title": "项目名称",
+    "description": "项目说明描述",
+    "home": "/page/index",
+    "autoLogin": true
+  },
+  "app": {
+    "window": {
+      "backgroundTextStyle": "#fff",
+      "navigationBarBackgroundColor": "#2fa2ff",
+      "navigationBarTitleText": "门店小程序",
+      "navigationBarTextStyle": "#fff",
+      "navigationStyle": "custom"
+    },
+    "navigation": {
+      "style": {
+        "color": "white",
+        "gradientLight": "#930101",
+        "gradientDark": "#5C0C0B"
+      },
+      "name": "驿动楚天"
+    },
+    "tabBar": {
+      "color": "#888888",
+      "selectedColor": "#990000",
+      "backgroundColor": "#1B1B1B",
+      "borderStyle": "white",
+      "position": "bottom",
+      "list": [
+        {
+          "pagePath": "pages/index",
+          "text": "首页",
+          "iconPath": "images/home.png",
+          "selectedIconPath": "images/home-active.png",
+          "navigation": true,
+          "style": {
+            "background": "#1b1b1b"
+          },
+          "components": [
+            {
+              "type": "carousel",
+              "id": "gasfdagfeg",
+              "data": {
+                "videoAutoplay": true,
+                "carouselHeight": "100vh",
+                "carouselDots": true,
+                "carouselAutoplay": false,
+                "carouselVertical": false,
+                "carouselInterval": 2000,
+                "carouselDuration": 500,
+                "carouselActiveDotColor": "#f80404"
+              }
+            },
+            {
+              "type": "shadeText",
+              "id": "dsfdsgfdsgd",
+              "data": {
+                "hight": "30vh",
+                "direction": "left",
+                "color": "red",
+                "titleSize": "100rpx",
+                "contentSize": "50rpx"
+              }
+            },
+            {
+              "type": "shadeText",
+              "id": "gadgiefgwed",
+              "data": {
+                "hight": "40vh",
+                "direction": "right",
+                "color": "#7C839F",
+                "titleSize": "100rpx",
+                "contentSize": "50rpx"
+              }
+            },
+            {
+              "type": "shadeText",
+              "id": "gvdvewgeged",
+              "data": {
+                "hight": "50vh",
+                "direction": "top",
+                "color": "#3FD1D9",
+                "titleSize": "40rpx",
+                "contentSize": "25rpx"
+              }
+            },
+            {
+              "type": "form",
+              "id": "devejljvasa",
+              "data": {
+                "formStyle": {
+                  "form": {
+                    "background": "#333",
+                    "placeholderColor": "#80807f",
+                    "padding": "50rpx"
+                  },
+                  "item": {
+                    "theme": "black",
+                    "isRadius": true,
+                    "height": "60rpx",
+                    "fontSize": "34rpx",
+                    "marginBottom": "20rpx",
+                    "borderRadius": "20rpx"
+                  },
+                  "submit": {
+                    "color": "white",
+                    "background": "red",
+                    "borderColor": "red"
+                  },
+                  "contact": {
+                    "color": "red",
+                    "background": "#333",
+                    "borderColor": "red"
+                  }
+                },
+                "formConfig": [
+                  {
+                    "type": "input",
+                    "field": "name",
+                    "placeholder": "姓名",
+                    "disabled": false,
+                    "verification": true
+                  },
+                  {
+                    "type": "input",
+                    "placeholder": "手机",
+                    "field": "phone"
+                  },
+                  {
+                    "type": "input",
+                    "placeholder": "微信号: 恐不能及时回复，可微信沟通",
+                    "field": "wechat"
+                  },
+                  {
+                    "type": "submit",
+                    "label": "提前预约"
+                  },
+                  {
+                    "type": "contact",
+                    "label": "在线咨询"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "company",
+              "id": "vjoijievreb",
+              "data": {
+                "keywords": [
+                  "mobilephone",
+                  "address",
+                  "boss"
+                ],
+                "style": {
+                  "background": "#1b1b1b",
+                  "color": "white",
+                  "fontSize": "24rpx"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "pagePath": "pages/college",
+          "text": "学院",
+          "iconPath": "images/college.png",
+          "navigation": true,
+          "selectedIconPath": "images/college-active.png",
+          "components": [
+            {
+              "type": "company",
+              "id": "vjoijievreb",
+              "data": {
+                "keywords": [
+                  "mobilephone",
+                  "address",
+                  "boss"
+                ],
+                "style": {
+                  "background": "#1b1b1b",
+                  "color": "white",
+                  "fontSize": "24rpx"
+                }
+              }
+            },
+            {
+              "type": "swiper",
+              "id": "rwegrovegr",
+              "data": {
+                "images": [
+                  "http://collie-1253114089.file.myqcloud.com/%E6%98%9F%E9%A9%BF%E5%8A%A8/%E7%9F%A9%E5%BD%A217%402x.png",
+                  "http://collie-1253114089.file.myqcloud.com/%E6%98%9F%E9%A9%BF%E5%8A%A8/%E7%9F%A9%E5%BD%A217%E6%8B%B7%E8%B4%9D%402x.png"
+                ],
+                "content": {
+                  "title": "教学环境",
+                  "subTitle": "Teaching environment"
+                }
+              },
+              "dom": "swiperIDrwegrovegr"
+            },
+            {
+              "type": "swiper",
+              "id": "afdsakfkdd",
+              "data": {
+                "images": [
+                  "http://collie-1253114089.file.myqcloud.com/%E6%98%9F%E9%A9%BF%E5%8A%A8/%E7%9F%A9%E5%BD%A217%E6%8B%B7%E8%B4%9D2%402x.png",
+                  "http://collie-1253114089.file.myqcloud.com/%E6%98%9F%E9%A9%BF%E5%8A%A8/%E7%9F%A9%E5%BD%A217%E6%8B%B7%E8%B4%9D2d%402x.png"
+                ],
+                "content": {
+                  "title": "教学场景",
+                  "subTitle": "Teaching scene"
+                }
+              },
+              "dom": "swiperIDafdsakfkdd"
+            }
+          ]
+        },
+        {
+          "pagePath": "pages/case",
+          "text": "案例",
+          "iconPath": "images/case.png",
+          "navigation": true,
+          "selectedIconPath": "images/case-active.png",
+          "components": [
+            {
+              "type": "company",
+              "id": "vjoijievreb",
+              "data": {
+                "keywords": [
+                  "mobilephone",
+                  "address",
+                  "boss"
+                ],
+                "style": {
+                  "background": "#1b1b1b",
+                  "color": "white",
+                  "fontSize": "24rpx"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "pagePath": "pages/report",
+          "text": "实况",
+          "iconPath": "images/info.png",
+          "navigation": true,
+          "selectedIconPath": "images/info-active.png",
+          "components": [
+            {
+              "type": "company",
+              "id": "vjoijievreb",
+              "data": {
+                "keywords": [
+                  "mobilephone",
+                  "address",
+                  "boss"
+                ],
+                "style": {
+                  "background": "#1b1b1b",
+                  "color": "white",
+                  "fontSize": "24rpx"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "pages": [
+      {
+        "title": "页面1",
+        "description": "demo页面",
+        "path": "pages/child",
+        "components": [
+          {
+            "type": "form",
+            "id": "devejljvasa",
+            "data": {
+              "formStyle": {
+                "height": "60rpx",
+                "fontSize": "34rpx"
+              },
+              "formConfig": [
+                {
+                  "type": "input",
+                  "inputShow": true,
+                  "inputType": "text",
+                  "label": "姓名",
+                  "field": "name",
+                  "placeholder": "请填写",
+                  "disabled": false,
+                  "verification": true
+                },
+                {
+                  "type": "input",
+                  "inputShow": true,
+                  "label": "电话",
+                  "field": "phone"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
