@@ -2,7 +2,7 @@ const _ = require('lodash');
 const fs = require('fs');
 const path = require('path');
 const shell = require('shelljs');
-const Handlebars = require('handlebars');
+const handlebars = require('handlebars');
 
 // gulp中调用,__dirname 是{project}/generator
 class Generator {
@@ -125,6 +125,7 @@ class Generator {
         tabPage: true,
         style: item.style
       };
+      console.log(item);
       this.generateSinglePage(data, index);
     });
     this.seed.app.pages.forEach((item, index) => {
@@ -164,7 +165,7 @@ class Generator {
    * @returns {string} 编译好的字符串
    */
   _compile(str, data) {
-    let tpl = Handlebars.compile(str);
+    let tpl = handlebars.compile(str);
     return tpl(data);
   }
   /**

@@ -5,6 +5,7 @@ class rp {
   constructor(url, type) {
     this.method = type;
     this.url = `${BASE_URL[ENV]}${url}`;
+    this.qs = {};
     this.headers = {};
     this.body = {};
   }
@@ -13,6 +14,14 @@ class rp {
       this.headers = v1;
     } else {
       this.headers[v1] = v2;
+    }
+    return this;
+  }
+  query(v1, v2) {
+    if (typeof v1 === 'object') {
+      this.qs = v1;
+    } else {
+      this.qs[v1] = v2;
     }
     return this;
   }
@@ -28,6 +37,11 @@ class rp {
       method: this.method,
       data: this.body
     };
+    let qs = [];
+    for (let k of this.qs) {
+      qs.push(`${k}=${this.qs[k]}`);
+    }
+    rpOpt += rpOpt.url.indexOf('?') === -1 ? `?${qs}` : `&${qs.join('&')}`;
     if (isJsonType) {
       rpOpt.data = this.body;
       rpOpt.dataType = 'json';

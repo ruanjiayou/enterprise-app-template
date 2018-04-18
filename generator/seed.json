@@ -271,6 +271,17 @@
     },
     "pages": [
       {
+        "title": "测试",
+        "description": "test",
+        "path": "pages/testFlexSquare",
+        "components": [
+          {
+            "type": "flexSquare",
+            "id": "123"
+          }
+        ]
+      },
+      {
         "title": "页面1",
         "description": "demo页面",
         "path": "pages/child",

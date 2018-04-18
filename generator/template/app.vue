@@ -13,7 +13,7 @@ import { shttp } from "./utils/http";
 import { signIn } from "./utils/user-tools";
 
 export default class extends wepy.app {
-  config = {{{config}}};
+  config = {{{ config }}};
 
   globalData = {
     userInfo: {},
@@ -30,7 +30,7 @@ export default class extends wepy.app {
 
   async onLaunch() {
     // 是否以获取授权的方式登录
-    const isGetUserInfo = {{ basic.autoLogin }};
+    const isGetUserInfo = {{{ basic.autoLogin }}};
     // 获取微信信息登录
     const res = await signIn(isGetUserInfo);
   }

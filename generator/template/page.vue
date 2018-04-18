@@ -5,7 +5,7 @@ page
 </style>
 <template>
   <view class="container">
-    {{{html}}}
+    {{{ html }}}
   </view>
 </template>
 
