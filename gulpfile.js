@@ -6,7 +6,7 @@ const Generator = require('./generator/generator');
 const SeedJson = require('./generator/seed');
 
 // 自动生成页面
-gulp.task('generate', () => {
+gulp.task('generate', ['clean:generate'], () => {
   const generate = new Generator(SeedJson);
   generate.generate();
 });

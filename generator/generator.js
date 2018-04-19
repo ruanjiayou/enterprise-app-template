@@ -125,7 +125,6 @@ class Generator {
         tabPage: true,
         style: item.style
       };
-      console.log(item);
       this.generateSinglePage(data, index);
     });
     this.seed.app.pages.forEach((item, index) => {

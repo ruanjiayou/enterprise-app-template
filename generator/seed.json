@@ -276,40 +276,42 @@
         "path": "pages/testFlexSquare",
         "components": [
           {
-            "type": "flexSquare",
-            "id": "123"
-          }
-        ]
-      },
-      {
-        "title": "页面1",
-        "description": "demo页面",
-        "path": "pages/child",
-        "components": [
-          {
-            "type": "form",
-            "id": "devejljvasa",
+            "type": "navigation",
             "data": {
-              "formStyle": {
-                "height": "60rpx",
-                "fontSize": "34rpx"
+              "style": {
+                "color": "white",
+                "gradientLight": "#930101",
+                "gradientDark": "#5C0C0B"
               },
-              "formConfig": [
+              "name": "驿动楚天"
+            }
+          },
+          {
+            "type": "flexSquare",
+            "id": "a123",
+            "dom": "flexSquare",
+            "data": {
+              "componentId": "a123",
+              "title": "应用场景",
+              "subTitle": "Application Scene",
+              "column": 3,
+              "position": "center",
+              "data": [
                 {
-                  "type": "input",
-                  "inputShow": true,
-                  "inputType": "text",
-                  "label": "姓名",
-                  "field": "name",
-                  "placeholder": "请填写",
-                  "disabled": false,
-                  "verification": true
+                  "src": "https://avatars2.githubusercontent.com/u/23392131?s=40&v=4",
+                  "title": "预约服务"
                 },
                 {
-                  "type": "input",
-                  "inputShow": true,
-                  "label": "电话",
-                  "field": "phone"
+                  "src": "https://avatars2.githubusercontent.com/u/23392131?s=40&v=4",
+                  "title": "公司品牌"
+                },
+                {
+                  "src": "https://avatars2.githubusercontent.com/u/23392131?s=40&v=4",
+                  "title": "电商买卖"
+                },
+                {
+                  "src": "https://avatars2.githubusercontent.com/u/23392131?s=40&v=4",
+                  "title": "商家联盟"
                 }
               ]
             }
