@@ -34,5 +34,4 @@ app.pages: 页面 title/description/path/components
 - 清空生成的代码: gulp clean:generate
 
 ## TODO:
-- handlebars改为ejs
--
+- 
