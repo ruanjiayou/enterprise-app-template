@@ -1,4 +1,5 @@
 <style lang="sass">
+@import "../styles/common.sass"
 page
   height: 100%
 {{{ pageStyle }}}

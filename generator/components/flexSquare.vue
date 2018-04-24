@@ -1,4 +1,9 @@
 <style lang="sass" scoped>
+.header-lean
+  border-left: 12rpx solid #3478ff
+  padding-left: 20rpx
+  font-size: 30rpx
+  margin: 30rpx
 .header
   padding: 20rpx 10rpx
   text-align: center
@@ -15,46 +20,74 @@
   .h2
     font-size: 24rpx
     margin-top: 10rpx
-
+    color: #3478ff
 .list
-  margin: 10rpx
+  margin: 0 40rpx
   display: flex
   flex-wrap: wrap
+  justify-content: space-between
   &>view
-    border: 1rpx solid #666
-    flex: 1 0 300rpx
-    margin: 10rpx
-    padding-top: 50%
-    position: relative
-    overflow: hidden
-    view
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      height: 100%
-    image
-      width: 100%
-      transform: translate(0,-50%)
-      margin-top: 50%   
+    flex: 0 0 45%
+    margin: 1%
+.square
+  border: 1rpx solid #666
+  padding-top: 100%
+  position: relative
+  overflow: hidden
+  image
+    width: 100%
+    transform: translate(-50%,-50%)
+    position: absolute
+    left: 50%
+    top: 50%
+.center
+  position: absolute
+  left: 50%
+  top: 50%
+  color: white
+  transform: translate(-50%,-50%)
+  border-top: 10rpx solid #3478ff
+  font-size: 30rpx;
+  white-space: nowrap;
+.outer
+  font-size: 28rpx
+  margin: 16rpx
+  line-height: 1.2
+  display: box
+  display: -webkit-box
+  line-clamp: 2
+  -webkit-line-clamp: 2
+  -webkit-box-orient: vertical
+  text-overflow: ellipsis
+  overflow: hidden
+
 </style>
 
 <template>
-  <view class="header">
+  <!-- 
+    需求:
+    1.文字的位置: center/outer
+    2.每行的列数: 2/3
+    3.文字的行数: <2
+    4.宽高的比例: 数字
+    5.直角圆角或圆形
+   -->
+  <view wx:if="{{ flexSquareOption.titlePos === 'center' }}" class="header">
     <view class="line"></view>
     <view class="title">
       <view class="h1">{{ flexSquareOption.title }}</view>
       <view class="h2" style="color: {{ themeColor }};">{{ flexSquareOption.subTitle }}</view>
     </view>
   </view>
+  <view wx:if="{{ flexSquareOption.titlePos === 'left' }}" class="header-lean">{{ flexSquareOption.title }}</view>
   <view class="list">
     <repeat for="{{ flexSquareOption.data }}" item="image">
-      <view>
-        <view>
+      <view style="flex: 0 0 {{ 90/flexSquareOption.column }}%;">
+        <view class="square" style="padding-top: {{ 100 /(flexSquareOption.WHratio || 1) }}%;{{ flexSquareOption.type === 'circle' ? 'border-radius:50%;' : '' }}{{ flexSquareOption.type === 'radius' ? 'border-radius: 20rpx;' : '' }}">
           <image src="{{ image.src }}"></image>
-          <text wx:if="{{ flexSquareOption.position !== 'outer' }}">{{ data.title }}</text>
+          <text wx:if="{{ flexSquareOption.position !== 'outer' }}" class="{{ flexSquareOption.position }}">{{ image.title }}</text>
         </view>
-        <text wx:if="{{ flexSquareOption.position === 'outer' }}">{{ data.title }}</text>
+        <view class="outer" wx:if="{{ flexSquareOption.position === 'outer' }}">{{ image.title }}</view>
       </view>
     </repeat>
   </view>
@@ -72,6 +105,7 @@ export default class FlexSquare extends wepy.component {
   data = {
     defaults: {
       componentId: '',
+      titlePos: 'center',
       title: '应用场景',
       subTitle: 'Application Scene',
       themeColor: '#7856ae',
@@ -92,6 +126,7 @@ export default class FlexSquare extends wepy.component {
   init() {
     const attrs = [
       'componentId',
+      'titlePos',
       'title',
       'subTitle',
       'themeColor',

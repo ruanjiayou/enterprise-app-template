@@ -10,6 +10,11 @@ gulp.task('generate', ['clean:generate'], () => {
   const generate = new Generator(SeedJson);
   generate.generate();
 });
+// watch 
+gulp.task('watch:generate', ()=>{
+  const files = ['*/*.vue', '*/*.json', '*/*.js'];
+  gulp.watch('./generator/*.*.vue', ['generate']);
+});
 // 清除编译的dist文件夹
 gulp.task('clean', () => {
   shell.rm('-rf', 'dist');
@@ -37,7 +42,7 @@ gulp.task('production', () => {
   run('production');
 });
 // 正式环境下编译运行
-gulp.task('default', ['clean', 'dev']);
+gulp.task('default', ['clean', 'dev', 'watch:generate']);
 
 const run = (env) => {
   // 设置环境变量

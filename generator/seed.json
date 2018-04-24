@@ -295,7 +295,42 @@
               "title": "应用场景",
               "subTitle": "Application Scene",
               "column": 3,
+              "WHratio": 1,
+              "type": "circle",
               "position": "center",
+              "data": [
+                {
+                  "src": "https://avatars2.githubusercontent.com/u/23392131?s=40&v=4",
+                  "title": "预约服务"
+                },
+                {
+                  "src": "https://avatars2.githubusercontent.com/u/23392131?s=40&v=4",
+                  "title": "公司品牌"
+                },
+                {
+                  "src": "https://avatars2.githubusercontent.com/u/23392131?s=40&v=4",
+                  "title": "电商买卖"
+                },
+                {
+                  "src": "https://avatars2.githubusercontent.com/u/23392131?s=40&v=4",
+                  "title": "商家联盟"
+                }
+              ]
+            }
+          },
+          {
+            "type": "flexSquare",
+            "id": "b456",
+            "dom": "flexSquare",
+            "data": {
+              "componentId": "b456",
+              "titlePos": "left",
+              "title": "应用场景",
+              "subTitle": "Application Scene",
+              "column": 2,
+              "WHratio": 2,
+              "type": "radius",
+              "position": "outer",
               "data": [
                 {
                   "src": "https://avatars2.githubusercontent.com/u/23392131?s=40&v=4",
